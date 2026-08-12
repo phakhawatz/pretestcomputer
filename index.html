@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ระบบจำลองการสอบ</title>
+<title>Pretest POSN-Computer</title>
+<link rel="shortcut icon" href="https://i.postimg.cc/KcstbwHt/android-chrome-192x192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js"></script>
@@ -253,7 +254,26 @@
 </style>
 </head>
 <body>
+    <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('ไม่เอาหน่าา อย่ารู้มาก😘');
+    }, false);
 
+    <!-- 2. ปิดปุ่มลัดทั่วไป -->
+    document.onkeydown = function(e) {
+        // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+Shift+C
+        if (
+            e.keyCode == 123 || 
+            (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 67)) ||
+            (e.ctrlKey && e.keyCode == 85) ||
+            (e.ctrlKey && e.keyCode == 83)
+        ) {
+            alert('บอกว่าอย่ารู้มากก🤭');
+            return false;
+        }
+    };
+    </script>
 <button class="admin-fab" onclick="openAdminAuth()">⚙️ Admin</button>
 
 <!-- ============ VIEW 1: LOGIN ============ -->
@@ -266,7 +286,7 @@
           <path d="M5 10.18V14.5C5 14.5 5 18 12 18C19 18 19 14.5 19 14.5V10.18L12 13.5L5 10.18Z" fill="white" fill-opacity="0.85"/>
         </svg>
       </div>
-      <div class="brand-title">Pretest Computer-POSN</div>
+      <div class="brand-title">Pretest POSN-Computer</div>
       <div class="brand-sub">กรุณากรอกข้อมูลผู้เข้าสอบ</div>
     </div>
     <form id="loginForm">
